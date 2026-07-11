@@ -3,6 +3,15 @@ import { GoChevronRight } from "react-icons/go";
 import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 
+const skills = [
+    "Python",
+    "C/C++",
+    "React",
+    "Tailwind CSS",
+    "PCB Design",
+    "CAD",
+];
+
 export const Hero = () => {
     return (
         // background
@@ -90,10 +99,38 @@ export const Hero = () => {
                     <div className="relative animate-fade-in animation-delay-300">
                         {/* profile pic */}
                         <div className="relative max-w-md mx-auto">
+                            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse"/>
                             <div className="relative glass rounded-3xl p-2 glow-border">
                                 <img src="/IMG_5940.jpg" alt="Kush Suthar" className="w-full aspect-[4/5] object-cover rounded-2xl"/>
+
+                                {/* floating badge */}
+                                <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float ">
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"/>
+                                        <span className="text-sm font-medium">Available for work</span>
+                                    </div>
+                                </div>
+                                {/* stats badge */}
+                                <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
+                                    <div className="text-2xl font-bold text-primary">4+</div>
+                                    <div className="text-xs text-muted-foreground">Years Exp.</div>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                {/* skills */}
+                <div className="mt-20 animate-fade-in animation-delay-600">
+                    <p className="text-sm text-muted-foreground mb-6 text-center">Technologies I work with</p>
+                    <div className="relative overflow-hidden">
+                        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10"/>
+                        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10"/>
+                        <div className="flex animate-marquee">{[...skills, ...skills, ...skills, ...skills].map((skill, idx) => (
+                            <div key={idx} className="flex-shrink-0 px-8 py-4">
+                                <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">{skill}</span>
+                            </div>
+                        ))}</div>
                     </div>
                 </div>
             </div>
