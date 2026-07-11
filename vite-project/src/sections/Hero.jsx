@@ -74,19 +74,27 @@ export const Hero = () => {
 
                         {/* social links */}
                         <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
-                            <span className="text-sm text-muted-foreground">Follow: </span>
+                            <span className="text-sm text-muted-foreground">Follow Me: </span>
                             {[
                                 {icon: FaGithub, href: "https://github.com/kus001"},
                                 {icon: FaLinkedinIn, href: "#"},
                                 {icon: FaInstagram, href: "https://www.instagram.com/kus.sutharr"},
                             ].map((social, idx) => (
                                 <a key={idx} href={social.href} className="p-5 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300">
-                                    {<social.icon />}
+                                    {<social.icon className="w-5 h-5"/>}
                                 </a>
                             ))}
                         </div>
                     </div>
                     {/* right column */}
+                    <div className="relative animate-fade-in animation-delay-300">
+                        {/* profile pic */}
+                        <div className="relative max-w-md mx-auto">
+                            <div className="relative glass rounded-3xl p-2 glow-border">
+                                <img src="/IMG_5940.jpg" alt="Kush Suthar" className="w-full aspect-[4/5] object-cover rounded-2xl"/>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
