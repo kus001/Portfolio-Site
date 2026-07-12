@@ -1,6 +1,6 @@
 import { HiOutlineDownload } from "react-icons/hi";
 
-export const AnimatedBorderButton = () => {
+export const AnimatedBorderButton = ({children }) => {
     return (
         <button className="relative bg-transparent border border-border text-foreground
         hover:border-primary/50 transition-all duration-1000 focus:outline-none 
@@ -27,7 +27,7 @@ export const AnimatedBorderButton = () => {
                 className="animated-border-path"
               />
             </svg>
-            <span className="relative z-10 flex items-center justify-center gap-2"><HiOutlineDownload className="w-5 h-5"/>Download CV</span>
+            <span className="relative z-10 flex items-center justify-center gap-2">{children}</span>
             </button>
     )
 }

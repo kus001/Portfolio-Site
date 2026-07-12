@@ -3,6 +3,7 @@ import { GoChevronRight } from "react-icons/go";
 import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 import { IoChevronDownOutline } from "react-icons/io5";
+import { HiOutlineDownload } from "react-icons/hi";
 
 const skills = [
     "Python",
@@ -79,7 +80,10 @@ export const Hero = () => {
                             <Button size="lg">
                                 Contact Me <GoChevronRight className="w-5 h-5"/>
                             </Button>
-                            <AnimatedBorderButton />
+                            <AnimatedBorderButton>
+                                <HiOutlineDownload className="w-5 h-5"/>
+                                Download CV
+                            </AnimatedBorderButton>
                         </div>
 
                         {/* social links */}
