@@ -1,5 +1,8 @@
+import { Button } from "@/components/Button"
 import { SiGmail } from "react-icons/si";
 import { FaPhoneAlt } from "react-icons/fa";
+import { TbSend } from "react-icons/tb";
+import { useState } from "react";
 
 const contactInfo = [
     {
@@ -17,6 +20,16 @@ const contactInfo = [
 ]
 
 export const Contact = () => {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: ""
+    })
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+    }
+
     return (
         <section id='contact' className="py-32 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full">
@@ -42,18 +55,46 @@ export const Contact = () => {
                         <form className="space-y-6">
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
-                                <input id="name" type="text" className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"/>
+                                <input id="name" 
+                                       type="text" 
+                                       required
+                                       placeholder="Your name..."
+                                       value={formData.name}
+                                       onChange={(e) => 
+                                        setFormData({ ...formData, name: e.target.value})
+                                        }
+                                       className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"/>
                             </div>
 
                             <div>
                                 <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
-                                <input id="email" type="text" className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"/>
+                                <input id="email" 
+                                       type="email" 
+                                       required
+                                       placeholder="your@email.com"
+                                       value={formData.name}
+                                       onChange={(e) => 
+                                        setFormData({ ...formData, email: e.target.value})
+                                       }   
+                                       className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"/>
                             </div>
 
                             <div>
                                 <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
-                                <input />
+                                <textarea 
+                                       rows={5}
+                                       required
+                                       placeholder="Your message..."
+                                       value={formData.name}
+                                       onChange={(e) => 
+                                        setFormData({ ...formData, email: e.target.value})
+                                       }   
+                                       className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"/>
                             </div>
+
+                            <Button className="w-full" type="submit" size="lg">
+                                Send message <TbSend />
+                            </Button>
                         </form>
                     </div>
                 </div>
