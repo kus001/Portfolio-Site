@@ -3,19 +3,22 @@ import { SiGmail } from "react-icons/si";
 import { FaPhoneAlt } from "react-icons/fa";
 import { TbSend } from "react-icons/tb";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { IoAlertCircleOutline } from "react-icons/io5";
+import { FaRegCircleCheck } from "react-icons/fa6";
 
 const contactInfo = [
     {
         icon: SiGmail,
         label: "Email",
-        value: "kush.asuthar@gmail.com",
-        href: "mailto:kush.asuthar@gmail.com",
+        value: "ex",
+        href: "ex",
     },
     {
         icon: FaPhoneAlt,
         label: "Phone",
-        value: "+1 (519) 465-2594",
-        href: "tel:+15194652594",
+        value: "ex",
+        href: "ex",
     }
 ]
 
@@ -24,15 +27,57 @@ export const Contact = () => {
         name: "",
         email: "",
         message: ""
+    });
+
+    const [isLoading, setIsLoading] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState({
+        type: null, // form submission successful or not
+        message: "",
     })
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        setIsLoading(true);
+        setSubmitStatus({ type: null, message: ""});
         try {
+            const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+            const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+            const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-        } catch (err) {
+            if (!serviceId || !templateId || !publicKey) {
+                throw new Error(
+                    "EmailJS configuration is missing. Please check your environment variables."
+                )
+            }
 
+            // check if emailjs is working
+            console.log({
+                serviceId,
+                templateId,
+                publicKey
+            });
+
+            await emailjs.send(serviceId, templateId, {
+                name: formData.name,
+                email: formData.email,
+                message: formData.message,
+            }, publicKey);
+
+            setSubmitStatus({
+                type: "success",
+                message: "Message sent successfully! I will get back to you soon."
+            })
+            setFormData({name: "", email: "", message: ""})
+        } catch (error) {
+            console.error("EmailJS error:", error)
+            setSubmitStatus({
+                type: "error",
+                message: 
+                    error.text || "Failed to send message. Please try again later."
+            });
+        } finally {
+            setIsLoading(false)
         }
     };
 
@@ -78,7 +123,7 @@ export const Contact = () => {
                                        type="email" 
                                        required
                                        placeholder="your@email.com"
-                                       value={formData.name}
+                                       value={formData.email}
                                        onChange={(e) => 
                                         setFormData({ ...formData, email: e.target.value})
                                        }   
@@ -91,16 +136,42 @@ export const Contact = () => {
                                        rows={5}
                                        required
                                        placeholder="Your message..."
-                                       value={formData.name}
+                                       value={formData.message}
                                        onChange={(e) => 
-                                        setFormData({ ...formData, email: e.target.value})
+                                        setFormData({ ...formData, message: e.target.value})
                                        }   
                                        className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"/>
                             </div>
 
-                            <Button className="w-full" type="submit" size="lg">
-                                Send message <TbSend />
+                            <Button className="w-full" type="submit" size="lg" disabled={isLoading}>
+                                {isLoading ? (
+                                    <>
+                                        Sending...
+                                    </>
+                                ) : (
+                                    <>
+                                        Send message
+                                        <TbSend className="w-5 h-5"/>
+                                    </>
+                                )}
                             </Button>
+
+                            {submitStatus.type && (
+                                <div 
+                                    className=
+                                        {`flex items-center gap-3 p-4 rounded-xl 
+                                        ${submitStatus.type === "success" ? 
+                                        "bg-green-500/10 border border-green-500/20 text-green-400" : 
+                                        "bg-red-500/10 border border-red-500/20 text-red-400"}`}
+                                >
+                                    {submitStatus.type === "success" ? (
+                                        <FaRegCircleCheck className="w-5 h-5 flex-shrink-0" />
+                                    ) : (
+                                        <IoAlertCircleOutline className="w-5 h-5 flex-shrink-0" />
+                                    )}
+                                    <p className="text-sm">{submitStatus.message}</p>
+                                </div>
+                            )}
                         </form>
                     </div>
                 </div>
