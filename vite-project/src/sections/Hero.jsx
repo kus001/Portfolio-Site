@@ -24,9 +24,9 @@ export const Hero = () => {
                 {[...Array(30)].map((_, i) => (
                     <div 
                         key={i}
-                        className="absolute w-1.5 h-1.5 rounded-full opacity-60"
+                        className="absolute w-1.5 h-1.5 rounded-full opacity-40"
                         style={{
-                            backgroundColor: "#20B2A6",
+                            backgroundColor: "#0071e3",
                             left: `${Math.random() * 100}%`,
                             top: `${Math.random() * 100}%`,
                             animation: `slow-drift ${15 + Math.random() * 20}s ease-in-out infinite`,

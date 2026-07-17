@@ -25,9 +25,9 @@ function App() {
       items-center
       justify-center
       p-6
-      bg-gradient-to-br
-      from-[#13547a]
-      to-[#80d0c7]
+      bg-gradient-to-t
+      from-[#09203f]
+      to-[#537895]
     ">
 
       <div className="

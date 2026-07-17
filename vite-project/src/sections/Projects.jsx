@@ -22,7 +22,7 @@ const projects = [
     {
         title: "This Portfolio Website",
         description: "A website where I will show off my projects and let people know who I am.",
-        tags: ["React", "Tailwind CSS", "UI/UX"],
+        tags: ["React", "Tailwind CSS","Vite", "UI/UX"],
         link: "#",
         github: "#",
     }

@@ -12,13 +12,13 @@ const contactInfo = [
         icon: SiGmail,
         label: "Email",
         value: "kush.asuthar@gmail.com",
-        href: "ex",
+        href: "mailto:kush.asuthar@gmail.com",
     },
     {
         icon: FaPhoneAlt,
         label: "Phone",
-        value: "ex",
-        href: "ex",
+        value: "+1 (519) 465-2594",
+        href: "tel:+15194652594",
     }
 ]
 
