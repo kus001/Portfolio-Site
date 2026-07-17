@@ -65,15 +65,6 @@ export const About = () => {
                             </p>
                         </div>
 
-                        {/* mission */}
-                        <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
-                            <p className="text-lg font-medium italic text-foreground">
-                                "I'm driven by curiosity: the urge to understand how things work, why they fail, and 
-                                how they can be improved. Whether I'm designing a circuit, programming a robot, or 
-                                prototyping a new idea, I enjoy the process of turning abstract concepts into systems
-                                that can interact with the real world."
-                            </p>
-                        </div>
                     </div>
       
                     {/* right column highlights */}
