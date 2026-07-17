@@ -19,21 +19,36 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen overflow-hidden">
+    <div className="
+      min-h-screen
+      flex
+      items-center
+      justify-center
+      p-6
+      bg-gradient-to-br
+      from-[#13547a]
+      to-[#80d0c7]
+    ">
 
-      <Navbar setActiveSection={setActiveSection}/>
-
-      <main className="
+      <div className="
+        w-full
         max-w-6xl
-        mx-auto
-        mt-10
-        p-8
         rounded-3xl
         glass
-        transition-all
+        overflow-hidden
       ">
-        {sections[activeSection]}
-      </main>
+
+        <Navbar setActiveSection={setActiveSection}/>
+
+        <main className="
+          p-8
+          transition-all
+          duration-500
+        ">
+          {sections[activeSection]}
+        </main>
+
+      </div>
 
     </div>
   );

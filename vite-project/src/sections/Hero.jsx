@@ -18,14 +18,6 @@ export const Hero = () => {
     return (
         // background
         <section className="relative min-h-screen flex items-center overflow-hidden">
-            <div className="absolute inset-0">
-                <img 
-                    src="/hero-bg.jpg" 
-                    alt="Hero image" 
-                    className="w-full h-full object-cover opacity-40"
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background"/>
-            </div>
 
             {/* Floating dots */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -129,8 +121,8 @@ export const Hero = () => {
                 <div className="mt-20 animate-fade-in animation-delay-600">
                     <p className="text-sm text-muted-foreground mb-6 text-center">Technologies I work with</p>
                     <div className="relative overflow-hidden">
-                        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10"/>
-                        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10"/>
+                        {/* <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10"/>
+                        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10"/> */}
                         <div className="flex animate-marquee">{[...skills, ...skills, ...skills, ...skills].map((skill, idx) => (
                             <div key={idx} className="flex-shrink-0 px-8 py-4">
                                 <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">{skill}</span>
@@ -138,14 +130,6 @@ export const Hero = () => {
                         ))}</div>
                     </div>
                 </div>
-            </div>
-
-            {/* scroll indicator */}
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-800">
-                <a href="#about" className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group">
-                    <span className="text-xs uppercase tracking-wider">Scroll</span>
-                    <IoChevronDownOutline className="w-6 h-6 animate-bounce"/>
-                </a>
             </div>
         </section>
     );
