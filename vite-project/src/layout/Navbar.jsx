@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/Button";
 
 const navLinks = [
-    {href: "#about", label: "About"},
-    {href: "#projects", label: "Projects"},
-    {href: "#experience", label: "Experience"},
-    {href: "#contact", label: "Contacts"}
+    {section: "home", label: "Home"},
+    {section: "about", label: "About"},
+    {section: "projects", label: "Projects"},
+    {section: "experience", label: "Experience"}
 ]
 
-export const Navbar = () => {
+export const Navbar = ({setActiveSection}) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -41,20 +41,22 @@ export const Navbar = () => {
             <div className="hidden md:flex  items-center gap-1">
                 <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
                     {navLinks.map((link, index) => (
-                        <a href={link.href} key={index} 
-                           className="px-4 py-2 text-sm text-muted-foreground 
-                           hover:text-foreground rounded-full 
-                           hover:bg-surface"
+                        <button
+                            key={index}
+                            onClick={() => setActiveSection(link.section)}
+                            className="px-4 py-2 text-sm text-muted-foreground 
+                            hover:text-foreground rounded-full 
+                            hover:bg-surface"
                         >
                             {link.label}
-                        </a>
+                        </button>
                     ))}
                 </div>
             </div>
 
             {/* MOBILE MENU BUTTON */}
             <div className="hidden md:block cursor-pointer">
-                <Button size="sm">Contact Me</Button>
+                <Button size="sm" onClick={() => setActiveSection("contact")}>Contact Me</Button>
             </div>
 
             {/* Mobile Menu (only when user is on a small screen) */}
@@ -68,11 +70,15 @@ export const Navbar = () => {
             <div className="md:hidden glass-strong animate-fade-in">
             <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
                 {navLinks.map((link, index) => (
-                    <a href={link.href} key={index} onClick={() => setIsMobileMenuOpen(false)}
-                       className="text-lg text-muted-foreground hover:text-foreground py-2"
+                    <button className="text-lg text-muted-foreground hover:text-foreground py-2 text-left"
+                            key={index}
+                            onClick={() => {
+                                setActiveSection(link.section);
+                                setIsMobileMenuOpen(false);
+                            }}
                     >
                         {link.label}
-                    </a>
+                    </button>
                 ))}
 
                 <Button onClick={() => setIsMobileMenuOpen(false)}>Contact Me</Button>
