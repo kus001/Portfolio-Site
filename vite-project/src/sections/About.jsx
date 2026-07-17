@@ -64,7 +64,6 @@ export const About = () => {
                                 opportunities to learn, create, and contribute to projects that have a real-world impact.
                             </p>
                         </div>
-
                     </div>
       
                     {/* right column highlights */}

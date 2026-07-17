@@ -3,21 +3,14 @@ import { FaGithub } from "react-icons/fa";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 
 const projects = [
-    {
-        title: "ESP32 Car + Web Controller",
-        description: "Built a remotely controlled robotic platform integrating embedded programming, motor control, and web technologies.",
-        image: ["esp32 car.png", "IMG_5940.jpg"],
-        tags: ["C/C++", "Robotics", "HTML", "CSS", "JavaScript", "CAD"],
+        {
+        title: "Custom EV PCB",
+        description: "Designing a custom PCB for EV monitoring with GPS tracking, speed measurement, power distribution, and embedded control.",
+        tags: ["PCB Design", "Hardware Design", "Embedded Systems"],
+        image: "#",
         link: "#",
         github: "#",
-    },
-    {
-        title: "USB Hub",
-        description: "Designed and built a fully custom USB hub from scratch, including PCB design, component selection, assembly, and hardware testing to create a functional multi-port USB interface.",
-        image: "usb hub.png",
-        tags: ["PCB Design", "Hardware Design"],
-        link: "#",
-        github: "#",        
+        status: 2
     },
     {
         title: "This Portfolio Website",
@@ -25,6 +18,25 @@ const projects = [
         tags: ["React", "Tailwind CSS","Vite", "UI/UX"],
         link: "#",
         github: "#",
+        status: 5,
+    },
+    {
+        title: "ESP32 Car + Web Controller",
+        description: "Built a remotely controlled robotic platform integrating embedded programming, motor control, and web technologies.",
+        image: ["esp32 car.png", "IMG_5940.jpg"],
+        tags: ["C/C++", "Robotics", "HTML", "CSS", "JavaScript", "CAD"],
+        link: "#",
+        github: "#",
+        status: "completed",
+    },
+    {
+        title: "USB Hub",
+        description: "Designed and built a fully custom USB hub from scratch, including PCB design, component selection, assembly, and hardware testing to create a functional multi-port USB interface.",
+        image: "usb hub.png",
+        tags: ["PCB Design", "Hardware Design"],
+        link: "#",
+        github: "#",
+        status: "completed",
     }
 ]
 
@@ -76,6 +88,20 @@ export const Projects = () => {
                                 </div>
 
                                 <p className="text-muted-foreground text-sm">{project.description}</p>
+
+                                {/* current projects */}
+                                {project.status !== "completed" && (
+                                    <div className="mt-5">
+                                        <div className="flex items-center gap-2 mb-3">
+                                            <span className="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+                                
+                                            <span className="text-sm text-primary font-medium">
+                                                Currently Building
+                                            </span>
+                                        </div>
+                                    </div>
+                                )}
+
                                 <div className="flex flex-wrap gap-2">
                                     {project.tags.map((tag, tagIdx) => (
                                         <span className="px-4 py-4 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300">{tag}</span>
