@@ -25,7 +25,7 @@ const profilePics = [
 
 const randomProfile = profilePics[Math.floor(Math.random() * profilePics.length)] // Math.floor() takes out any decimal points and makes sure that valid, whole # indexes are used 
 
-export const Hero = () => {
+export const Hero = ({ setActiveSection }) => {
     return (
         // background
         <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -80,12 +80,12 @@ export const Hero = () => {
 
                         {/* CTA */}
                         <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-                            <Button size="lg">
+                            <Button size="lg" onClick={() => setActiveSection("contact")}> {/* had to get help from AI for some parts, I could not figure out the syntax of using setActiveSection() with onClick() */}
                                 Contact Me <GoChevronRight className="w-5 h-5"/>
                             </Button>
-                            <AnimatedBorderButton>
+                            <AnimatedBorderButton onClick={() => window.open("@public/Resume - Kush Suthar.png", "_blank")}>
                                 <HiOutlineDownload className="w-5 h-5"/>
-                                Download CV
+                                Download Resume
                             </AnimatedBorderButton>
                         </div>
 

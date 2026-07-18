@@ -1,6 +1,6 @@
 import { HiOutlineDownload } from "react-icons/hi";
 
-export const AnimatedBorderButton = ({children }) => {
+export const AnimatedBorderButton = ({children, onClick }) => { // added and onClick to lead to go to the resume
     return (
         <button className="relative bg-transparent border border-border text-foreground
         hover:border-primary/50 transition-all duration-1000 focus:outline-none 

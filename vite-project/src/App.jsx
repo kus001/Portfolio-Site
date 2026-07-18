@@ -6,12 +6,15 @@ import { Hero } from "@/sections/Hero";
 import { Projects } from "@/sections/Projects";
 import { Contact } from "@/sections/Contact";
 
+
+// had to get help from AI, could not figure out how to change the website from just being a single page where you scroll down, to having the buttons in the navbar actually lead to different pages.
+
 function App() {
 
   const [activeSection, setActiveSection] = useState("home");
 
   const sections = {
-    home: <Hero />,
+    home: <Hero setActiveSection={setActiveSection} />,
     about: <About />,
     projects: <Projects />,
     experience: <Experience />,
