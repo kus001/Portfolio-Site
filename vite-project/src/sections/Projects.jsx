@@ -94,7 +94,6 @@ export const Projects = () => {
                                     <div className="mt-5">
                                         <div className="flex items-center gap-2 mb-3">
                                             <span className="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
-                                
                                             <span className="text-sm text-primary font-medium">
                                                 Currently Building
                                             </span>

@@ -1,3 +1,4 @@
+import profilePic from "@/assets/download.png";
 import { Button } from "@/components/Button";
 import { GoChevronRight } from "react-icons/go";
 import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
@@ -26,7 +27,7 @@ export const Hero = () => {
                         key={i}
                         className="absolute w-1.5 h-1.5 rounded-full opacity-40"
                         style={{
-                            backgroundColor: "#0071e3",
+                            backgroundColor: "#0071e3", 
                             left: `${Math.random() * 100}%`,
                             top: `${Math.random() * 100}%`,
                             animation: `slow-drift ${15 + Math.random() * 20}s ease-in-out infinite`,
@@ -98,7 +99,7 @@ export const Hero = () => {
                         <div className="relative max-w-md mx-auto">
                             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse"/>
                             <div className="relative glass rounded-3xl p-2 glow-border">
-                                <img src="/IMG_5940.jpg" alt="Kush Suthar" className="w-full aspect-[4/5] object-cover rounded-2xl"/>
+                                <img src={profilePic} alt="Kush Suthar" className="w-full aspect-[4/5] object-cover rounded-2xl"/>
 
                                 {/* floating badge */}
                                 <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float ">
