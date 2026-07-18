@@ -26,7 +26,7 @@ const projects = [
         title: "ESP32 Car + Web Controller",
         description: "Built a remotely controlled robotic platform integrating embedded programming, motor control, and web technologies.",
         image: ["esp32 car.png", "IMG_5940.jpg"],
-        tags: ["C/C++", "Robotics", "HTML", "CSS", "JavaScript", "CAD"],
+        tags: ["C/C++", "Robotics", "Webdev", "CAD"],
         link: "https://docs.google.com/document/d/13kPvpQyWogPpfZdzw-zhv5D13WLjuKJg6q-XV9teAcQ/edit?tab=t.0",
         github: "https://github.com/kus001/TEJ3MI-Robotics-Summative",
         progress: 10,
@@ -36,7 +36,7 @@ const projects = [
         title: "ESP32 Car controller with a Bluetooth Controller",
         description: "",
         image: "",
-        tags: ["C/C++", "Robotics", "HTML", "CSS", "JavaScript", "CAD"],
+        tags: ["C/C++", "Robotics", "CAD"],
         link: "https://docs.google.com/document/d/1fr0gebTkqTvOU0qW7BXbmSLKvKvnd_P4/edit",
         github: "https://github.com/kus001/TEJ3MI-Culminating-Task/tree/main",
         progress: 10,
@@ -95,7 +95,7 @@ export const Projects = () => {
                             </div>
 
                             {/* content */}
-                            <div className="p-6 space-y-4">
+                            <div className="p-6 space-y-3">
                                 <div className="flex items-start justify-between">
                                     <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">{project.title}</h3>
                                     <LuMoveUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
@@ -116,19 +116,27 @@ export const Projects = () => {
                                 )}
 
                                 {/* progress bar */}
-                                <div className="flex gap-2 w-full">
-                                    {[...Array(10)].map((block, blockIdx) => (
-                                        <div key={blockIdx} className={`w-4 h-4 rounded-sm transition-all duration-500 animate-fade-in animation-delay-100 ${
-                                            blockIdx < project.progress
-                                            ? "bg-primary"
-                                            : "border border-primary/20 bg-transparent"
-                                        }`}/>
-                                    ))}
-                                </div>
+                                {project.status !== "completed" && (
+                                    <div className="space-y-2">
+                                        <p className="text-xs font-medium text-muted-foreground uppercase">
+                                            progress
+                                        </p>
+
+                                        <div className="flex gap-2 w-full">
+                                            {[...Array(10)].map((block, blockIdx) => (
+                                                <div key={blockIdx} className={`w-4 h-4 rounded-sm transition-all duration-500 animate-fade-in animation-delay-100 ${
+                                                    blockIdx < project.progress
+                                                    ? "bg-primary"
+                                                    : "border border-border bg-transparent"
+                                                }`}/>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
 
                                 <div className="flex flex-wrap gap-2">
                                     {project.tags.map((tag, tagIdx) => (
-                                        <span className="px-4 py-4 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300">{tag}</span>
+                                        <span className="px-3 py-1.5 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300">{tag}</span>
                                     ))}
                                 </div>
                             </div>
