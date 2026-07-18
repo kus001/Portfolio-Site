@@ -10,7 +10,8 @@ const projects = [
         image: "#",
         link: "#",
         github: "#",
-        status: 2
+        progress: 2,
+        status: "building",
     },
     {
         title: "This Portfolio Website",
@@ -18,7 +19,8 @@ const projects = [
         tags: ["React", "Tailwind CSS","Vite", "UI/UX"],
         link: "#",
         github: "#", 
-        status: 5,
+        progress: 6,
+        status: "building",
     },
     {
         title: "ESP32 Car + Web Controller",
@@ -27,8 +29,19 @@ const projects = [
         tags: ["C/C++", "Robotics", "HTML", "CSS", "JavaScript", "CAD"],
         link: "https://docs.google.com/document/d/13kPvpQyWogPpfZdzw-zhv5D13WLjuKJg6q-XV9teAcQ/edit?tab=t.0",
         github: "https://github.com/kus001/TEJ3MI-Robotics-Summative",
+        progress: 10,
         status: "completed",
-    },  
+    },
+    {
+        title: "ESP32 Car controller with a Bluetooth Controller",
+        description: "",
+        image: "",
+        tags: ["C/C++", "Robotics", "HTML", "CSS", "JavaScript", "CAD"],
+        link: "https://docs.google.com/document/d/1fr0gebTkqTvOU0qW7BXbmSLKvKvnd_P4/edit",
+        github: "https://github.com/kus001/TEJ3MI-Culminating-Task/tree/main",
+        progress: 10,
+        status: "completed",
+    },
     {
         title: "USB Hub",
         description: "Designed and built a fully custom USB hub from scratch, including PCB design, component selection, assembly, and hardware testing to create a functional multi-port USB interface.",
@@ -36,6 +49,7 @@ const projects = [
         tags: ["PCB Design", "Hardware Design"],
         link: "#",
         github: "#",
+        progress: 10,
         status: "completed",
     }
 ]
@@ -100,6 +114,16 @@ export const Projects = () => {
                                         </div>
                                     </div>
                                 )}
+
+                                <div className="flex gap-1.5 items-center">
+                                    {[...Array(10)].map((block, blockIdx) => (
+                                        <div key={blockIdx} className={`w-3 h-3 rounded-sm transition-all duration-300 animate-fade-in animation-delay-100 ${
+                                            blockIdx < project.progress
+                                            ? "bg-primary"
+                                            : "bg-muted"
+                                        }`}/>
+                                    ))}
+                                </div>
 
                                 <div className="flex flex-wrap gap-2">
                                     {project.tags.map((tag, tagIdx) => (
