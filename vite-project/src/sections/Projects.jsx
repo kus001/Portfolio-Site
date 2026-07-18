@@ -17,7 +17,7 @@ const projects = [
         description: "A website where I will show off my projects and let people know who I am.",
         tags: ["React", "Tailwind CSS","Vite", "UI/UX"],
         link: "#",
-        github: "#",
+        github: "#", 
         status: 5,
     },
     {
@@ -25,10 +25,10 @@ const projects = [
         description: "Built a remotely controlled robotic platform integrating embedded programming, motor control, and web technologies.",
         image: ["esp32 car.png", "IMG_5940.jpg"],
         tags: ["C/C++", "Robotics", "HTML", "CSS", "JavaScript", "CAD"],
-        link: "#",
-        github: "#",
+        link: "https://docs.google.com/document/d/13kPvpQyWogPpfZdzw-zhv5D13WLjuKJg6q-XV9teAcQ/edit?tab=t.0",
+        github: "https://github.com/kus001/TEJ3MI-Robotics-Summative",
         status: "completed",
-    },
+    },  
     {
         title: "USB Hub",
         description: "Designed and built a fully custom USB hub from scratch, including PCB design, component selection, assembly, and hardware testing to create a functional multi-port USB interface.",

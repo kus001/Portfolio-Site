@@ -83,7 +83,7 @@ export const Hero = ({ setActiveSection }) => {
                             <Button size="lg" onClick={() => setActiveSection("contact")}> {/* had to get help from AI for some parts, I could not figure out the syntax of using setActiveSection() with onClick() */}
                                 Contact Me <GoChevronRight className="w-5 h-5"/>
                             </Button>
-                            <AnimatedBorderButton onClick={() => window.open("@public/Resume - Kush Suthar.png", "_blank")}>
+                            <AnimatedBorderButton onClick={() => window.open("/Resume - Kush Suthar.png", "_blank")}>
                                 <HiOutlineDownload className="w-5 h-5"/>
                                 Download Resume
                             </AnimatedBorderButton>
