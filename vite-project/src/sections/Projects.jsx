@@ -115,12 +115,13 @@ export const Projects = () => {
                                     </div>
                                 )}
 
-                                <div className="flex gap-1.5 items-center">
+                                {/* progress bar */}
+                                <div className="flex gap-2 w-full">
                                     {[...Array(10)].map((block, blockIdx) => (
-                                        <div key={blockIdx} className={`w-3 h-3 rounded-sm transition-all duration-300 animate-fade-in animation-delay-100 ${
+                                        <div key={blockIdx} className={`w-4 h-4 rounded-sm transition-all duration-500 animate-fade-in animation-delay-100 ${
                                             blockIdx < project.progress
                                             ? "bg-primary"
-                                            : "bg-muted"
+                                            : "border border-primary/20 bg-transparent"
                                         }`}/>
                                     ))}
                                 </div>
