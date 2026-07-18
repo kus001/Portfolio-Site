@@ -1,4 +1,6 @@
-import profilePic from "@/assets/download.png";
+import profile1 from "@/assets/download.png";
+import profile3 from "@/assets/profilepic3.png";
+import profile4 from "@/assets/profilepic4.png";
 import { Button } from "@/components/Button";
 import { GoChevronRight } from "react-icons/go";
 import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
@@ -14,6 +16,14 @@ const skills = [
     "PCB Design",
     "CAD",
 ];
+
+const profilePics = [
+    profile1,
+    profile3,
+    profile4,
+]
+
+const randomProfile = profilePics[Math.floor(Math.random() * profilePics.length)] // Math.floor() takes out any decimal points and makes sure that valid, whole # indexes are used 
 
 export const Hero = () => {
     return (
@@ -99,7 +109,7 @@ export const Hero = () => {
                         <div className="relative max-w-md mx-auto">
                             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse"/>
                             <div className="relative glass rounded-3xl p-2 glow-border">
-                                <img src={profilePic} alt="Kush Suthar" className="w-full aspect-[4/5] object-cover rounded-2xl"/>
+                                <img src={randomProfile} alt="Kush Suthar" className="w-full aspect-[4/5] object-cover object-center rounded-2xl scale-95"/>
 
                                 {/* floating badge */}
                                 <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float ">
