@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #f5f5f7;
-  --color-foreground: #111827;
-  --color-muted-foreground: #374151;
-  --color-primary: #0071e3;
-  --color-primary-foreground: #ffffff;
+  --color-background: #0a0a0b;
+  --color-foreground: #f8fafc;
+  --color-muted-foreground: #a1a1aa;
 
-  --color-border: rgba(0,0,0,0.08);
-  --color-surface: rgba(255,255,255,0.6);
+  --color-primary: #b8c2cc;
+  --color-primary-foreground: #0a0a0b;
+
+  --color-border: rgba(255,255,255,0.12);
+  --color-surface: rgba(255,255,255,0.08);
 }
 
 @layer base {
@@ -32,11 +33,31 @@
 }
 
 @layer components {
+
+  /* background themes */
+  .bg-chocolate {
+  background: #1e130c;
+  background: -webkit-linear-gradient(to bottom, #9a8478, #1e130c);
+  background: linear-gradient(to bottom, #9a8478, #1e130c);
+  }
+
+  .bg-deep-space {
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .bg-moonlit-asteroid {
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
   .glass {
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   }
   

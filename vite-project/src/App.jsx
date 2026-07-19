@@ -5,6 +5,7 @@ import { Experience } from "@/sections/Experience";
 import { Hero } from "@/sections/Hero";
 import { Projects } from "@/sections/Projects";
 import { Contact } from "@/sections/Contact";
+import { randomBackground } from "@/styles/backgrounds";
 
 
 // had to get help from AI, could not figure out how to change the website from just being a single page where you scroll down, to having the buttons in the navbar actually lead to different pages.
@@ -22,16 +23,14 @@ function App() {
   };
 
   return (
-    <div className="
+    <div className={`
       min-h-screen
       flex
       items-center
       justify-center
       p-6
-      bg-gradient-to-t
-      from-[#09203f]
-      to-[#537895]
-    ">
+      ${randomBackground}
+    `}>
 
       <div className="
         w-full
