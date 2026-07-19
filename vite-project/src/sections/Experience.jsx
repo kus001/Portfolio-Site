@@ -47,7 +47,7 @@ export const Experience = () => {
                     </h2>
 
                     {/* experiences description */}
-                    <p className="text-muted-foreground animate-fade-in animation-delay-200">
+                    <p className="text-muted-foreground font-code animate-fade-in animation-delay-200">
                         A collection of experiences where I learned, built, and led while developing 
                         skills across robotics, embedded systems, engineering, and collaboration.
                     </p>
@@ -71,12 +71,12 @@ export const Experience = () => {
                                 {/* content */}
                                 <div className={`pl-8 md:pl-0 ${idx % 2 === 0 ? "md:pr-16 md:text-right" : "md:col-start-2 md:pl-16"}`}>
                                     <div className={`glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500`}>
-                                        <span className="text-sm text-primary font-medium">{exp.period}</span>
-                                        <h3 className="text-xl font-semibold mt-2">{exp.role}</h3>
-                                        <p className="text-muted-foreground">{exp.company}</p>
-                                        <p className="text-sm text-muted-foreground mt-4">{exp.description}</p>
+                                        <span className="text-sm text-primary font-medium font-code">{exp.period}</span>
+                                        <h3 className="text-xl font-semibold font-code tracking-wide mt-2">{exp.role}</h3>
+                                        <p className="text-muted-foreground font-code">{exp.company}</p>
+                                        <p className="text-sm text-muted-foreground font-clean mt-4">{exp.description}</p>
                                         <div className={`flex flex-wrap gap-2 mt-4 ${idx % 2 === 0 ? "md-justify-end" : ""}`}>{exp.skills.map((skill, skillIdx) => (
-                                            <span className="px-3 py-1 bg-surface text-xs rounded-full text-muted-foreground">{skill}</span>
+                                            <span className="px-3 py-1 bg-surface text-xs font-medium font-code rounded-full text-muted-foreground border border-border/10 hover:border-primary/35 hover:text-primary transition-all">{skill}</span>
                                         ))}</div>
                                     </div>
                                 </div>

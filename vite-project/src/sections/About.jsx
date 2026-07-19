@@ -43,7 +43,7 @@ export const About = () => {
                         </h2>
 
                         {/* about me text */}
-                        <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
+                        <div className="space-y-4 text-muted-foreground font-clean animate-fade-in animation-delay-200">
                             <p>
                                 I am an aspiring engineer who enjoys turning ideas into things I can actually
                                 build, test, and improve. Whether it's designing electronics for a robotics project, 
@@ -73,8 +73,8 @@ export const About = () => {
                                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20">
                                     <item.icon className="w-6 h-6 text-primary" />
                                 </div>
-                                <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                                <p className="text-sm text-muted-foreground">
+                                <h3 className="text-lg font-semibold font-clean tracking-wider mb-2">{item.title}</h3>
+                                <p className="text-sm font-clean text-muted-foreground">
                                     {item.description}
                                 </p>
                             </div>

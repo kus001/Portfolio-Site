@@ -53,7 +53,7 @@ export const Hero = ({ setActiveSection }) => {
                     {/* left column */}
                     <div className="space-y-6">
                         <div className="animate-fade-in">
-                            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
+                            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm tracking-wider font-medium font-code text-primary">
                                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse"/> 
                                 Student · Waterloo Collegiate Institute
                             </span>
@@ -61,17 +61,17 @@ export const Hero = ({ setActiveSection }) => {
 
                         {/* headline */}
                         <div className="space-y-4">
-                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
+                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-code leading-tight animate-fade-in animation-delay-100">
                                 Kush <span className="text-primary glow-text">Suthar</span>
                             </h1>
-                            <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation animation-delay-200">
+                            <p className="text-lg text-muted-foreground max-w-lg font-clean animate-fade-in animation animation-delay-200">
                                 Engineering things that make life a little more interesting.
                             </p>
                         </div>
 
                         {/* social links */}
                         <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
-                            <span className="text-sm text-muted-foreground">Find me: </span>
+                            <span className="text-sm text-muted-foreground font-medium tracking-wider font-clean">Find me: </span>
                             {[
                                 {icon: FaGithub, href: "https://github.com/kus001"},
                                 {icon: FaLinkedinIn, href: "#"},
@@ -97,13 +97,13 @@ export const Hero = ({ setActiveSection }) => {
                                 <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float ">
                                     <div className="flex items-center gap-3">
                                         <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"/>
-                                        <span className="text-sm font-medium">Available for work</span>
+                                        <span className="text-sm font-clean font-medium">Available for work</span>
                                     </div>
                                 </div>
                                 {/* stats badge */}
                                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                                    <div className="text-2xl font-bold text-primary">4+</div>
-                                    <div className="text-xs text-muted-foreground">Years Exp.</div>
+                                    <div className="text-2xl font-bold font-code tracking-widest text-primary">4+</div>
+                                    <div className="text-xs font-clean text-muted-foreground">Years Exp.</div>
                                 </div>
                             </div>
                         </div>
@@ -112,13 +112,13 @@ export const Hero = ({ setActiveSection }) => {
 
                 {/* skills */}
                 <div className="mt-20 animate-fade-in animation-delay-600">
-                    <p className="text-sm text-muted-foreground mb-6 text-center">Technologies I work with</p>
+                    <p className="text-sm text-muted-foreground mb-6 text-center font-medium font-code tracking-widest">// Technologies I work with //</p>
                     <div className="relative overflow-hidden">
                         {/* <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10"/>
                         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10"/> */}
                         <div className="flex animate-marquee">{[...skills, ...skills, ...skills, ...skills].map((skill, idx) => (
                             <div key={idx} className="flex-shrink-0 px-8 py-4">
-                                <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">{skill}</span>
+                                <span className="text-xl font-clean tracking-wider font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">{skill}</span>
                             </div>
                         ))}</div>
                     </div>

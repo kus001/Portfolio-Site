@@ -31,7 +31,7 @@ export const Navbar = ({setActiveSection}) => {
         <nav className="container mx-auto px-6 flex items-center justify-between">
             <a 
                 href="#" 
-                className="text-xl font-bold tracking-light hover:text-primary"
+                className="text-xl font-bold font-clean tracking-wider tracking-light hover:text-primary"
             >
                 KS<span className="text-primary">.</span>
             </a>
@@ -44,7 +44,7 @@ export const Navbar = ({setActiveSection}) => {
                         <button
                             key={index}
                             onClick={() => setActiveSection(link.section)}
-                            className="px-4 py-2 text-sm text-muted-foreground 
+                            className="px-4 py-2 text-sm font-clean text-muted-foreground 
                             hover:text-foreground rounded-full 
                             hover:bg-surface"
                         >
