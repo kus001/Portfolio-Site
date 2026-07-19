@@ -5,7 +5,7 @@ import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 const projects = [
         {
         title: "Custom EV PCB",
-        description: "Designing a custom PCB for EV monitoring with GPS tracking, speed measurement, power distribution, and embedded control.",
+        description: "Designing a custom PCB for EV monitoring with GPS tracking, speed measurement and embedded control.",
         tags: ["PCB Design", "Hardware Design", "Embedded Systems"],
         image: "#",
         link: "#",
@@ -24,7 +24,7 @@ const projects = [
     },
     {
         title: "ESP32 Car + Web Controller",
-        description: "Built an RC car from scratch that is controlled via a custom app.",
+        description: "Built an RC car from scratch that is controlled via a custom app hosted on the ESP32's server.",
         image: ["esp32 car.png", "IMG_5940.jpg"],
         tags: ["C/C++", "Robotics", "Webdev", "CAD"],
         link: "https://docs.google.com/document/d/13kPvpQyWogPpfZdzw-zhv5D13WLjuKJg6q-XV9teAcQ/edit?tab=t.0",
@@ -64,12 +64,12 @@ export const Projects = () => {
 
                 {/* section header */}
                 <div className="text-center mx-auto max-w-3xl mb-16">
-                    <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">Featured Work</span>
+                    <span className="text-secondary-foreground text-sm font-medium font-code tracking-widest uppercase animate-fade-in">// Featured Work //</span>
                     <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animation-delay-100 text-secondary-foreground">
                         Projects that
                         <span className="font-serif italic font-normal text-white"> make an impact.</span>
                     </h2>
-                    <p className="text-muted-foreground animate-fade-in animation-delay-200">
+                    <p className="text-muted-foreground font-code animate-fade-in animation-delay-200">
                         A selection of my recent work.
                     </p>
                 </div>
@@ -85,9 +85,9 @@ export const Projects = () => {
 
                                 {/* overlay links */}
                                 <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <a href={project.link} className="p-3 glass rounded-full hover:text-primary-foreground transition-all">
+                                    {/* <a href={project.link} className="p-3 glass rounded-full hover:text-primary-foreground transition-all">
                                         <LuMoveUpRight className="w-5 h-5"/>
-                                    </a>
+                                    </a> */}
                                     <a href={project.github} className="p-3 glass rounded-full hover:text-primary-foreground transition-all">
                                         <FaGithub className="w-5 h-5"/>
                                     </a>
@@ -97,18 +97,18 @@ export const Projects = () => {
                             {/* content */}
                             <div className="p-6 space-y-3">
                                 <div className="flex items-start justify-between">
-                                    <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">{project.title}</h3>
+                                    <h3 className="text-xl font-semibold group-hover:text-primary transition-colors font-code">{project.title}</h3>
                                     <LuMoveUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                                 </div>
 
-                                <p className="text-muted-foreground text-sm">{project.description}</p>
+                                <p className="text-muted-foreground font-clean text-sm">{project.description}</p>
 
                                 {/* current projects */}
                                 {project.status !== "completed" && (
                                     <div className="mt-5">
                                         <div className="flex items-center gap-2 mb-3">
                                             <span className="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
-                                            <span className="text-sm text-primary font-medium">
+                                            <span className="text-sm text-primary font-bold font-code">
                                                 Currently Building
                                             </span>
                                         </div>
@@ -118,7 +118,7 @@ export const Projects = () => {
                                 {/* progress bar */}
                                 {project.status !== "completed" && (
                                     <div className="space-y-2 py-1">
-                                        <p className="text-xs font-medium text-muted-foreground uppercase s">
+                                        <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
                                             progress
                                         </p>
 
@@ -136,7 +136,7 @@ export const Projects = () => {
 
                                 <div className="flex flex-wrap gap-2">
                                     {project.tags.map((tag, tagIdx) => (
-                                        <span className="px-3 py-1.5 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300">{tag}</span>
+                                        <span className="px-3 py-1.5 rounded-full bg-surface text-xs font-medium font-code tracking-wider border border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300">{tag}</span>
                                     ))}
                                 </div>
                             </div>

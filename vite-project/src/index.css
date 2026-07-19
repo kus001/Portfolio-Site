@@ -10,6 +10,11 @@
 
   --color-border: rgba(184, 194, 204, 0.15); 
   --color-surface: rgba(184, 194, 204, 0.06);
+
+  /* fonts */
+  --font-space: "Space Grotesk", san-serif;
+  --font-clean: "Intel One Mono", monospace;
+  --font-code: "JetBrains Mono", monospace;
 }
 
 @layer base {
@@ -35,7 +40,7 @@
 @layer components {
 
   /* background themes */
-
+  
   .bg-royal {
     background: #141E30;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */

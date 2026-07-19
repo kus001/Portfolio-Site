@@ -48,7 +48,6 @@ export const Hero = ({ setActiveSection }) => {
             </div>
 
             {/* content */}
-
             <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* left column */}
@@ -79,7 +78,7 @@ export const Hero = ({ setActiveSection }) => {
                                 {icon: FaInstagram, href: "https://www.instagram.com/kus.sutharr"},
                                 {icon: FaFileAlt, label: "Resume", onClick : () => window.open("/Resume - Kush Suthar.png", "_blank")}
                             ].map((social, idx) => (
-                                <a key={idx} href={social.href} onClick={social.onClick} className="p-4 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300">
+                                <a key={idx} href={social.href} onClick={social.onClick} className="p-4 rounded-full glass hover:bg-primary/10 hover:bg-primary/20 transition-all duration-300">
                                     {<social.icon className="w-4.5 h-4.5"/>}
                                 </a>
                             ))}
