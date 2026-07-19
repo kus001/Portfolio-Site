@@ -67,10 +67,10 @@ export const Navbar = ({setActiveSection}) => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-            <div className="md:hidden glass-strong animate-fade-in">
+            <div className="md:hidden bg-background/97 animate-fade-in">
             <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
                 {navLinks.map((link, index) => (
-                    <button className="text-lg text-muted-foreground hover:text-foreground py-2 text-left"
+                    <button className="text-lg text-muted-foreground hover:text-foreground py-2 text-left text-lg font-clean"
                             key={index}
                             onClick={() => {
                                 setActiveSection(link.section);
@@ -81,7 +81,7 @@ export const Navbar = ({setActiveSection}) => {
                     </button>
                 ))}
 
-                <Button onClick={() => setIsMobileMenuOpen(false)}>Contact Me</Button>
+                <Button onClick={() => {setActiveSection("contact"); setIsMobileMenuOpen(false)}}>Contact Me</Button>
             </div>
         </div>
         )}
