@@ -118,7 +118,7 @@ export const Projects = () => {
                                 {/* progress bar */}
                                 {project.status !== "completed" && (
                                     <div className="space-y-2 py-1">
-                                        <p className="text-xs font-medium text-muted-foreground uppercase">
+                                        <p className="text-xs font-medium text-muted-foreground uppercase s">
                                             progress
                                         </p>
 

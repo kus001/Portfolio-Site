@@ -1,5 +1,5 @@
-import profile1 from "@/assets/download.png";
-import profile3 from "@/assets/profilepic3.png";
+import profile1 from "@/assets/profile1.png";
+import profile2 from "@/assets/profile2.png";
 import profile4 from "@/assets/profilepic4.png";
 import { Button } from "@/components/Button";
 import { GoChevronRight } from "react-icons/go";
@@ -19,7 +19,7 @@ const skills = [
 
 const profilePics = [
     profile1,
-    profile3,
+    profile2,
     profile4,
 ]
 
@@ -35,9 +35,9 @@ export const Hero = ({ setActiveSection }) => {
                 {[...Array(30)].map((_, i) => (
                     <div 
                         key={i}
-                        className="absolute w-1.5 h-1.5 rounded-full opacity-40"
+                        className="absolute w-1.5 h-1.5 rounded-full filter blur-[0.5px] opacity-20"
                         style={{
-                            backgroundColor: "#0071e3", 
+                            backgroundColor: "#e2e8f0", 
                             left: `${Math.random() * 100}%`,
                             top: `${Math.random() * 100}%`,
                             animation: `slow-drift ${15 + Math.random() * 20}s ease-in-out infinite`,

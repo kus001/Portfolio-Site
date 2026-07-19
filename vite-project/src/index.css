@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0a0a0b;
-  --color-foreground: #f8fafc;
-  --color-muted-foreground: #a1a1aa;
+  --color-background: #0f1216; 
+  --color-foreground: #f1f5f9; 
+  --color-muted-foreground: #94a3b8; 
 
-  --color-primary: #b8c2cc;
-  --color-primary-foreground: #0a0a0b;
+  --color-primary: #b8c2cc; 
+  --color-primary-foreground: #0f1216; 
 
-  --color-border: rgba(255,255,255,0.12);
-  --color-surface: rgba(255,255,255,0.08);
+  --color-border: rgba(184, 194, 204, 0.15); 
+  --color-surface: rgba(184, 194, 204, 0.06);
 }
 
 @layer base {
@@ -35,10 +35,11 @@
 @layer components {
 
   /* background themes */
-  .bg-chocolate {
-  background: #1e130c;
-  background: -webkit-linear-gradient(to bottom, #9a8478, #1e130c);
-  background: linear-gradient(to bottom, #9a8478, #1e130c);
+
+  .bg-royal {
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 
   .bg-deep-space {
@@ -54,19 +55,19 @@
   }
 
   .glass {
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    background: rgba(184, 194, 204, 0.08); /* Tinted with your silver */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(184, 194, 204, 0.2); /* Etched silver border */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   }
   
   .glass-strong {
-    background: rgba(255, 255, 255, 0.28);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
-    border: 1px solid rgba(255, 255, 255, 0.45);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    background: rgba(184, 194, 204, 0.18); /* Stronger silver tint */
+    backdrop-filter: blur(40px); /* Massive blur for a premium frost effect */
+    -webkit-backdrop-filter: blur(40px);
+    border: 1px solid rgba(184, 194, 204, 0.35);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
   }
 
   .glow-text {
