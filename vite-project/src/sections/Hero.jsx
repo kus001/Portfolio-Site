@@ -56,25 +56,23 @@ export const Hero = ({ setActiveSection }) => {
                         <div className="animate-fade-in">
                             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse"/> 
-                                Highschool Student · Waterloo Collegiate Institute
+                                Student · Waterloo Collegiate Institute
                             </span>
                         </div>
 
                         {/* headline */}
                         <div className="space-y-4">
                             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                                Crafting <span className="text-primary glow-text">digital</span>
-                                <br />
+                                Kush <span className="text-primary glow-text">Suthar</span>
+                                {/* <br />
                                 experiences with
                                 <br />
                                 <span className="font-serif italic font-normal text-white"> 
                                     precision.
-                                </span>
+                                </span> */}
                             </h1>
                             <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation animation-delay-200">
-                                Hi, I am Kush Suthar, a student at Waterloo Collegiate Institute and an aspiring Mechatronics Engineer.
-                                I enjoy building things that move, think, and solve problems. My work spans 
-                                embedded systems, robotics, electronics, and software development.
+                                Engineering things that make life a little more interesting.
                             </p>
                         </div>
 

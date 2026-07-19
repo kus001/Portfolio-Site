@@ -24,7 +24,7 @@ const projects = [
     },
     {
         title: "ESP32 Car + Web Controller",
-        description: "Built a remotely controlled robotic platform integrating embedded programming, motor control, and web technologies.",
+        description: "Built an RC car from scratch that is controlled via a custom app.",
         image: ["esp32 car.png", "IMG_5940.jpg"],
         tags: ["C/C++", "Robotics", "Webdev", "CAD"],
         link: "https://docs.google.com/document/d/13kPvpQyWogPpfZdzw-zhv5D13WLjuKJg6q-XV9teAcQ/edit?tab=t.0",
@@ -33,8 +33,8 @@ const projects = [
         status: "completed",
     },
     {
-        title: "ESP32 Car controller with a Bluetooth Controller",
-        description: "",
+        title: "ESP32 car with a robotic arm",
+        description: "Built off of the ESP32 car, with an added 5-joint robotic arm and being controlled by a Bluetooth controller.",
         image: "",
         tags: ["C/C++", "Robotics", "CAD"],
         link: "https://docs.google.com/document/d/1fr0gebTkqTvOU0qW7BXbmSLKvKvnd_P4/edit",
@@ -44,7 +44,7 @@ const projects = [
     },
     {
         title: "USB Hub",
-        description: "Designed and built a fully custom USB hub from scratch, including PCB design, component selection, assembly, and hardware testing to create a functional multi-port USB interface.",
+        description: "Designed and built a fully custom USB hub.",
         image: "usb hub.png",
         tags: ["PCB Design", "Hardware Design"],
         link: "#",
@@ -117,14 +117,14 @@ export const Projects = () => {
 
                                 {/* progress bar */}
                                 {project.status !== "completed" && (
-                                    <div className="space-y-2">
+                                    <div className="space-y-2 py-1">
                                         <p className="text-xs font-medium text-muted-foreground uppercase">
                                             progress
                                         </p>
 
                                         <div className="flex gap-2 w-full">
                                             {[...Array(10)].map((block, blockIdx) => (
-                                                <div key={blockIdx} className={`w-4 h-4 rounded-sm transition-all duration-500 animate-fade-in animation-delay-100 ${
+                                                <div key={blockIdx} className={`flex-1 h-3 rounded-sm transition-all duration-500 animate-fade-in animation-delay-100 ${
                                                     blockIdx < project.progress
                                                     ? "bg-primary"
                                                     : "border border-border bg-transparent"
