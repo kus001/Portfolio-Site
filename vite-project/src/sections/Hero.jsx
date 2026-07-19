@@ -3,7 +3,7 @@ import profile3 from "@/assets/profilepic3.png";
 import profile4 from "@/assets/profilepic4.png";
 import { Button } from "@/components/Button";
 import { GoChevronRight } from "react-icons/go";
-import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaInstagram, FaFileAlt } from "react-icons/fa";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 import { IoChevronDownOutline } from "react-icons/io5";
 import { HiOutlineDownload } from "react-icons/hi";
@@ -52,7 +52,7 @@ export const Hero = ({ setActiveSection }) => {
             <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* left column */}
-                    <div className="space-y-8">
+                    <div className="space-y-6">
                         <div className="animate-fade-in">
                             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse"/> 
@@ -64,43 +64,28 @@ export const Hero = ({ setActiveSection }) => {
                         <div className="space-y-4">
                             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
                                 Kush <span className="text-primary glow-text">Suthar</span>
-                                {/* <br />
-                                experiences with
-                                <br />
-                                <span className="font-serif italic font-normal text-white"> 
-                                    precision.
-                                </span> */}
                             </h1>
                             <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation animation-delay-200">
                                 Engineering things that make life a little more interesting.
                             </p>
                         </div>
 
-                        {/* CTA */}
-                        <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-                            <Button size="lg" onClick={() => setActiveSection("contact")}> {/* had to get help from AI for some parts, I could not figure out the syntax of using setActiveSection() with onClick() */}
-                                Contact Me <GoChevronRight className="w-5 h-5"/>
-                            </Button>
-                            <AnimatedBorderButton onClick={() => window.open("/Resume - Kush Suthar.png", "_blank")}>
-                                <HiOutlineDownload className="w-5 h-5"/>
-                                Download Resume
-                            </AnimatedBorderButton>
-                        </div>
-
                         {/* social links */}
                         <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
-                            <span className="text-sm text-muted-foreground">Follow Me: </span>
+                            <span className="text-sm text-muted-foreground">Find me: </span>
                             {[
                                 {icon: FaGithub, href: "https://github.com/kus001"},
                                 {icon: FaLinkedinIn, href: "#"},
                                 {icon: FaInstagram, href: "https://www.instagram.com/kus.sutharr"},
+                                {icon: FaFileAlt, label: "Resume", onClick : () => window.open("/Resume - Kush Suthar.png", "_blank")}
                             ].map((social, idx) => (
-                                <a key={idx} href={social.href} className="p-5 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300">
-                                    {<social.icon className="w-5 h-5"/>}
+                                <a key={idx} href={social.href} onClick={social.onClick} className="p-4 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300">
+                                    {<social.icon className="w-4.5 h-4.5"/>}
                                 </a>
                             ))}
                         </div>
                     </div>
+
                     {/* right column */}
                     <div className="relative animate-fade-in animation-delay-300">
                         {/* profile pic */}
