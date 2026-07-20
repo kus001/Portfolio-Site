@@ -105,20 +105,20 @@ export const Contact = () => {
                     <div className="glass p-8 rounded-3xl border border-primary/30 animate-fade-in animation-delay-300">
                         <form className="space-y-6" onSubmit={handleSubmit}>
                             <div>
-                                <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
+                                <label htmlFor="name" className="block text-sm font-medium font-clean tracking-wider mb-2">Name</label>
                                 <input id="name" 
                                        type="text" 
                                        required
-                                       placeholder="Your name..."
+                                       placeholder="your name"
                                        value={formData.name}
                                        onChange={(e) => 
                                         setFormData({ ...formData, name: e.target.value})
                                         }
-                                       className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"/>
+                                       className="w-full px-4 py-3 font-code bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"/>
                             </div>
 
                             <div>
-                                <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
+                                <label htmlFor="email" className="block text-sm font-medium font-clean tracking-wider mb-2">Email</label>
                                 <input id="email" 
                                        type="email" 
                                        required
@@ -127,20 +127,20 @@ export const Contact = () => {
                                        onChange={(e) => 
                                         setFormData({ ...formData, email: e.target.value})
                                        }   
-                                       className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"/>
+                                       className="w-full px-4 py-3 font-clean bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"/>
                             </div>
 
                             <div>
-                                <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
+                                <label htmlFor="message" className="block text-sm font-medium font-clean tracking-wider mb-2">Message</label>
                                 <textarea 
                                        rows={5}
                                        required
-                                       placeholder="Your message..."
+                                       placeholder="your message"
                                        value={formData.message}
                                        onChange={(e) => 
                                         setFormData({ ...formData, message: e.target.value})
                                        }   
-                                       className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"/>
+                                       className="w-full px-4 py-3 font-code bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"/>
                             </div>
 
                             <Button className="w-full" type="submit" size="lg" disabled={isLoading}>
@@ -188,10 +188,10 @@ export const Contact = () => {
                                             <item.icon className="w-5 h-5 text-primary" />
                                         </div>
                                         <div>
-                                            <div className="text-sm text-muted-foreground">
+                                            <div className="text-sm font-cleanest text-muted-foreground">
                                                 {item.label}
                                             </div>
-                                            <div className="font-medium">{item.value}</div>
+                                            <div className="font-medium font-cleanest">{item.value}</div>
                                         </div>
                                     </a>
                                 ))}
@@ -202,9 +202,9 @@ export const Contact = () => {
                         <div className="glass rounded-3xl p-8 border border-primary/30">
                             <div className="flex items-center gap-3 mb-4">
                                 <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                                <span className="font-medium">Currently Available</span>
+                                <span className="font-medium font-cleanest">Currently Available</span>
                             </div>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-sm font-cleanest">
                                 I'm currently open to new opportunities and exciting projects. 
                             </p>
                         </div>
