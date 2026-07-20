@@ -67,7 +67,7 @@ export const Navbar = ({setActiveSection}) => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-            <div className="md:hidden bg-background/97 animate-fade-in">
+            <div className="md:hidden bg-background/97 animate-fade-in"> // translucent background, might change colour later
             <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
                 {navLinks.map((link, index) => (
                     <button className="text-lg text-muted-foreground hover:text-foreground py-2 text-left text-lg font-clean"
