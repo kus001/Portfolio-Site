@@ -19,7 +19,7 @@ const projects = [
         tags: ["React", "Tailwind CSS","Vite", "UI/UX"],
         link: "#",
         github: "#", 
-        progress: 6,
+        progress: 7,
         status: "building",
     },
     {
