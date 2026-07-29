@@ -96,7 +96,7 @@ export const Contact = () => {
                             touch
                         </span>
                     </h2>
-                    <p className="text-muted-foreground animate-fade-in animation-delay-200">
+                    <p className="text-muted-foreground animate-fade-in font-code animation-delay-200">
                         Have a question, an opportunity, or just want to connect? Feel free to reach out.
                     </p>
                 </div>

@@ -3,7 +3,17 @@ import { FaGithub } from "react-icons/fa";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 
 const projects = [
-        {
+    {
+        title: "Lipo Battery Monitoring",
+        description: "A custom, compact LiPo Battery monitoring PCB to help save our club's batteries from dying.",
+        tags: ["PCB Design", "Hardware Design", "Embedded Systems"],
+        image: "Robotics club-logos (5) (1).jpeg",
+        link: "#",
+        github: "https://github.com/kus001/3S-Lipo-Battery-Monitoring-PCB",
+        progress: 2,
+        status: "building",
+    },
+    {
         title: "Custom EV PCB",
         description: "Designing a custom PCB for EV monitoring with GPS tracking, speed measurement and embedded control.",
         tags: ["PCB Design", "Hardware Design", "Embedded Systems"],
@@ -19,7 +29,7 @@ const projects = [
         tags: ["React", "Tailwind CSS","Vite", "UI/UX"],
         link: "#",
         github: "#", 
-        progress: 7,
+        progress: 8,
         status: "building",
     },
     {

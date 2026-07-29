@@ -15,6 +15,7 @@ const skills = [
     "Tailwind CSS",
     "PCB Design",
     "CAD",
+    "Java",
 ];
 
 const profilePics = [
@@ -73,9 +74,9 @@ export const Hero = ({ setActiveSection }) => {
                         <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
                             <span className="text-sm text-muted-foreground font-medium tracking-wider font-clean">Find me: </span>
                             {[
-                                {icon: FaGithub, href: "https://github.com/kus001"},
-                                {icon: FaLinkedinIn, href: "#"},
-                                {icon: FaInstagram, href: "https://www.instagram.com/kus.sutharr"},
+                                {icon: FaGithub, label: "Github", onClick : () => window.open("https://github.com/kus001", "_blank")},
+                                {icon: FaLinkedinIn, label: "Linkedin", onClick : () => window.open("", "_blank")},
+                                {icon: FaInstagram, label: "Instagram", onClick : () => window.open("https://www.instagram.com/kus.sutharr", "_blank")},
                                 {icon: FaFileAlt, label: "Resume", onClick : () => window.open("/Resume - Kush Suthar.png", "_blank")}
                             ].map((social, idx) => (
                                 <a key={idx} href={social.href} onClick={social.onClick} className="p-4 rounded-full glass hover:bg-primary/10 hover:bg-primary/20 transition-all duration-300">
