@@ -157,7 +157,7 @@ export const Projects = () => {
 
                 {/* look at all projects */}
                 <div className="text-center mt-12 animate-fade-in animation-delay-500">
-                    <AnimatedBorderButton>
+                    <AnimatedBorderButton onClick={() => window.open("https://github.com/kus001", "_blank")}>
                         View all projects
                         <LuMoveUpRight className="w-5 h-5"/>
                     </AnimatedBorderButton>
