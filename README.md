@@ -58,7 +58,10 @@ Tools:
 - npm
 - git
 
-## 👤 Author
+## Deployment
 
-* **Developer:** Kush Suthar (`kus001`)
-* **Built For:** Hack Club Horizons
+Live site: [kush-suthar.vercel.app](https://kush-suthar.vercel.app/)
+
+## AI
+
+Some AI was used to assist with page navigation and certain styling to make the website run and look smoother.
