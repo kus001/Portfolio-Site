@@ -3,7 +3,7 @@
 This is my personal portfolio website designed to showcase my hardware engineering, PCB design, and software projects. Built with React, Tailwind CSS, and Vite, it uses a clean windowed layout where you click through the navbar to switch between 
 sections like my projects, about me, experience, and contact info.
 
-The reason I chose to make a personal website for Hackclub Horizons was that I had a lot of projects made, but no real way to show them. That was the reason why I decided to make a portfolio website
+The reason I chose to make a personal website for [Hack Club](https://horizons.hackclub.com/app?noanimate) Horizons was that I had a lot of projects made, but no real way to show them. That was the reason why I decided to make a portfolio website
 
 For context, I had very little experience in web dev, which was mainly done during my grade 10 CS course (mainly p5.js, and some basic HTML/CSS/JS). So, to understand and learn how these frameworks worked, I followed a tutorial. The particular tutorial I followed 
 was from [PedroTech](https://www.youtube.com/watch?v=cIYdiRDFWQw). 
@@ -15,10 +15,10 @@ which had Design/Electrical/Software lessons that were created by the execs to b
 
 Before this project, I had built several robotics and PCB hardware projects, but I didn't have a centralized place to showcase them. I wanted to build a portfolio for **Hack Club Horizons** to share my work with the community. 
 
-Coming into this, my web development background was limited to basic HTML/CSS/JS and p5.js from my 10th-grade CS class. To learn modern web development frameworks, I followed a tutorial by [PedroTech](https://www.youtube.com/watch?v=cIYdiRDFWQw) 
+Coming into this, my web development background was limited to basic HTML/CSS/JS and p5.js from my 10th-grade CS class. To learn web dev frameworks, I followed a tutorial by [PedroTech](https://www.youtube.com/watch?v=cIYdiRDFWQw) 
 to grasp component structure, state management, and Tailwind styling. The skills I learned while building this site directly helped me contribute to my school robotics club's educational website!
 
-## 📸 Screenshots
+## Screenshots
 
 | Home Page | About Me |
 | :---: | :---: |
