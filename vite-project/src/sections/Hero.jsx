@@ -75,7 +75,8 @@ export const Hero = ({ setActiveSection }) => {
                             <span className="text-sm text-muted-foreground font-medium tracking-wider font-clean">Find me: </span>
                             {[
                                 {icon: FaGithub, label: "Github", onClick : () => window.open("https://github.com/kus001", "_blank")},
-                                {icon: FaLinkedinIn, label: "Linkedin", onClick : () => window.open("", "_blank")},
+                                // {icon: FaLinkedinIn, label: "Linkedin", onClick : () => window.open("", "_blank")}, 
+                                // logged out of Linkedin account, when logged back on, ADD BACK the link
                                 {icon: FaInstagram, label: "Instagram", onClick : () => window.open("https://www.instagram.com/kus.sutharr", "_blank")},
                                 {icon: FaFileAlt, label: "Resume", onClick : () => window.open("/Resume - Kush Suthar.png", "_blank")}
                             ].map((social, idx) => (

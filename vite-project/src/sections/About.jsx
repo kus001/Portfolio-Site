@@ -7,17 +7,17 @@ const highlights = [
     {
         icon: IoMdInfinite,
         title: "Adaptability",
-        description: "Learning new skills quickly and taking on challenges outside my comfort zone.",
+        description: "Learning new skills quickly and taking on challenges outside my comfort zone."
     },
     {
         icon: CiLink,
         title: "Multidisciplinary Engineering",
-        description: "Combining software, electronics, and mechanical design to build complete projects."
+        description: "Combining all kinds of engineering to build complete projects."
     },
     {
         icon: GoTools,
         title: "Problem Solving",
-        description: "Debugging problems, testing ideas, and improving designs through interaction."
+        description: "Constantly debugging, testing, and improving things."
     },
     {
         icon: MdOutlineGroups3,
@@ -46,14 +46,11 @@ export const About = () => {
                         <div className="space-y-4 text-muted-foreground font-clean animate-fade-in animation-delay-200">
                             <p>
                                 I am an aspiring engineer who enjoys turning ideas into things I can actually
-                                build, test, and improve. Whether it's designing electronics for a robotics project, 
-                                programming a microcontroller, or creating software to solve a problem, I love the 
-                                process of figuring out how different pieces come together to create something useful.
+                                build, test, and improve. 
                             </p>
                             <p>
                                 My interests lie somewhere in the middle of robotics, embedded systems, and 
-                                software engineering. Through robotics, EV engineering, and personal projects, I
-                                have learned that engineering is rarely about getting everything right the first time;
+                                software engineering. I have learned that engineering is not about getting everything right the first time;
                                 it is about experimenting, debugging, and continuously improving. I enjoy taking on
                                 challenges that push me outside my comfort zone and learning whatever skills are needed 
                                 to bring an idea to life.
