@@ -1,34 +1,37 @@
 import { LuMoveUpRight } from "react-icons/lu";
 import { FaGithub } from "react-icons/fa";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
+import robotics_logo from "@/assets/wci_robotics.jpeg";
+import sample_code from "@/assets/sample-code.png";
+import esp32_car from "@/assets/esp32 car.png";
+import robotic_arm from "@/assets/robotic arm.jpg";
 
 const projects = [
     {
         title: "Lipo Battery Monitoring",
         description: "A custom, compact LiPo Battery monitoring PCB to help save our club's batteries from dying.",
         tags: ["PCB Design", "Hardware Design", "Embedded Systems"],
-        image: "Robotics club-logos (5) (1).jpeg",
-        link: "#",
+        image: robotics_logo,
         github: "https://github.com/kus001/3S-Lipo-Battery-Monitoring-PCB",
-        progress: 2,
+        progress: 3,
         status: "building",
     },
-    {
-        title: "Custom EV PCB",
-        description: "Designing a custom PCB for EV monitoring with GPS tracking, speed measurement and embedded control.",
-        tags: ["PCB Design", "Hardware Design", "Embedded Systems"],
-        image: "#",
-        link: "#",
-        github: "#",
-        progress: 2,
-        status: "building",
-    },
+    // {
+    //     title: "Custom EV PCB",
+    //     description: "Designing a custom PCB for EV monitoring with GPS tracking, speed measurement and embedded control.",
+    //     tags: ["PCB Design", "Hardware Design", "Embedded Systems"],
+    //     image: "#",
+    //     link: "#",
+    //     github: "#",
+    //     progress: 2,
+    //     status: "building",
+    // },
     {
         title: "This Portfolio Website",
         description: "A website where I will show off my projects and let people know who I am.",
         tags: ["React", "Tailwind CSS","Vite", "UI/UX"],
-        link: "#",
-        github: "#", 
+        image: sample_code,
+        github: "https://github.com/kus001/Portfolio-Site", 
         progress: 8,
         status: "building",
     },
@@ -37,7 +40,7 @@ const projects = [
         description: "Built an RC car from scratch that is controlled via a custom app hosted on the ESP32's server.",
         image: ["esp32 car.png", "IMG_5940.jpg"],
         tags: ["C/C++", "Robotics", "Webdev", "CAD"],
-        link: "https://docs.google.com/document/d/13kPvpQyWogPpfZdzw-zhv5D13WLjuKJg6q-XV9teAcQ/edit?tab=t.0",
+        image: esp32_car,
         github: "https://github.com/kus001/TEJ3MI-Robotics-Summative",
         progress: 10,
         status: "completed",
@@ -45,9 +48,8 @@ const projects = [
     {
         title: "ESP32 car with a robotic arm",
         description: "Built off of the ESP32 car, with an added 5-joint robotic arm and being controlled by a Bluetooth controller.",
-        image: "",
+        image: robotic_arm,
         tags: ["C/C++", "Robotics", "CAD"],
-        link: "https://docs.google.com/document/d/1fr0gebTkqTvOU0qW7BXbmSLKvKvnd_P4/edit",
         github: "https://github.com/kus001/TEJ3MI-Culminating-Task/tree/main",
         progress: 10,
         status: "completed",
@@ -57,7 +59,6 @@ const projects = [
         description: "Designed and built a fully custom USB hub.",
         image: "usb hub.png",
         tags: ["PCB Design", "Hardware Design"],
-        link: "#",
         github: "#",
         progress: 10,
         status: "completed",
