@@ -11,13 +11,6 @@ was from [PedroTech](https://www.youtube.com/watch?v=cIYdiRDFWQw).
 This tutorial was especially helpful because it taught me how a lot of websites are made and taught me skills that I could use for my other projects. One of the projects these skills were used in was our school's robotics club's website, 
 which had Design/Electrical/Software lessons that were created by the execs to be used as teaching material for everyone. 
 
-## Motivation
-
-Before this project, I had built several robotics and PCB hardware projects, but I didn't have a centralized place to showcase them. I wanted to build a portfolio for **Hack Club Horizons** to share my work with the community. 
-
-Coming into this, my web development background was limited to basic HTML/CSS/JS and p5.js from my 10th-grade CS class. To learn web dev frameworks, I followed a tutorial by [PedroTech](https://www.youtube.com/watch?v=cIYdiRDFWQw) 
-to grasp component structure, state management, and Tailwind styling. The skills I learned while building this site directly helped me contribute to my school robotics club's educational website!
-
 ## Screenshots
 
 | Home Page | About Me |
