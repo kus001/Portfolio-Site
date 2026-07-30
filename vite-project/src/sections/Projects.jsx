@@ -59,7 +59,7 @@ const projects = [
         description: "Designed and built a fully custom USB hub.",
         image: "usb hub.png",
         tags: ["PCB Design", "Hardware Design"],
-        github: "#",
+        github: "https://github.com/kus001/Usb_hub",
         progress: 10,
         status: "completed",
     }
