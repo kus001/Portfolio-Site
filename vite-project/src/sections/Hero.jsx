@@ -96,12 +96,13 @@ export const Hero = ({ setActiveSection }) => {
                                 <img src={randomProfile} alt="Kush Suthar" className="w-full aspect-[4/5] object-cover object-center rounded-2xl scale-95"/>
 
                                 {/* floating badge */}
-                                <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float ">
+                                {/* <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float ">
                                     <div className="flex items-center gap-3">
                                         <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"/>
                                         <span className="text-sm font-clean font-medium">Available for work</span>
                                     </div>
-                                </div>
+                                </div> */}
+                                
                                 {/* stats badge */}
                                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
                                     <div className="text-2xl font-bold font-code tracking-widest text-primary">4+</div>
