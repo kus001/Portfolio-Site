@@ -38,8 +38,8 @@ export const About = () => {
                         </div>
 
                         <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-                            Building the future,
-                            <span className="font-serif italic font-normal text-white"> one component at a time.</span>
+                            A bit about
+                            <span className="font-serif italic font-normal text-white"> me</span>
                         </h2>
 
                         {/* about me text */}
@@ -49,14 +49,12 @@ export const About = () => {
                                 build, test, and improve. 
                             </p>
                             <p>
-                                My interests lie somewhere in the middle of robotics, embedded systems, and 
-                                software engineering. I have learned that engineering is not about getting everything right the first time;
-                                it is about experimenting, debugging, and continuously improving. I enjoy taking on
+                                My interests lie somewhere in the robotics, electronics, and software. I enjoy taking on
                                 challenges that push me outside my comfort zone and learning whatever skills are needed 
                                 to bring an idea to life.
                             </p>
                             <p>
-                                Beyond building projects, I enjoy sharing what I learn with others through teachings,
+                                Beyond building projects, I enjoy sharing what I learn with others through teaching,
                                 collaboration, and leadership in my school's robotics community. I'm always looking for 
                                 opportunities to learn, create, and contribute to projects that have a real-world impact.
                             </p>
