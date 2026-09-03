@@ -1,6 +1,14 @@
 const experiences = [
+    { 
+        period: "Mid-2026 – Present",
+        role: "First Robotics",
+        company: "2702 Rebels",
+        description: "Working with the 2702 Rebels to help create a robot to compete in the upcoming FRC Season.",
+        skills: ["Electronics", "Robotics", "CAD", "Teamwork", "Communication"],
+        current: true,
+    },
     {
-        period: "Mid-2025 – Present",
+        period: "Mid-2026 – Present",
         role: "Robotics Executive",
         company: "Waterloo Collegiate Institute",
         description: "Leading electronics initiatives, creating hardware lessons, and helping organize MechMania, WRDSB's largest robotics competition.",
@@ -41,9 +49,9 @@ export const Experience = () => {
             <div className="container mx-auto px-6 relative z-10">
                 {/* section header */}
                 <div className="max-w-3xl mb-16">
-                    <span className="text-secondary-foreground text-sm font-medium font-code tracking-widest uppercase animate-fade-in">// Career Journey //</span>
+                    <span className="text-secondary-foreground text-sm font-medium font-code tracking-widest uppercase animate-fade-in">// Journey //</span>
                     <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-                        Experience that <span className="font-serif italic font-normal text-white"> speaks volumes.</span>
+                        My  <span className="font-serif italic font-normal text-white"> experiences </span> so far.
                     </h2>
 
                     {/* experiences description */}
@@ -69,7 +77,7 @@ export const Experience = () => {
                                 
 
                                 {/* content */}
-                                <div className={`pl-8 md:pl-0 ${idx % 2 === 0 ? "md:pr-16 md:text-right" : "md:col-start-2 md:pl-16"}`}>
+                                <div className={`pl-8 md:pl-0 ${idx % 2 === 0 ? "md:pr-16" : "md:col-start-2 md:pl-16"}`}>
                                     <div className={`glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500`}>
                                         <span className="text-sm text-primary font-medium font-code">{exp.period}</span>
                                         <h3 className="text-xl font-semibold font-code tracking-wide mt-2">{exp.role}</h3>
