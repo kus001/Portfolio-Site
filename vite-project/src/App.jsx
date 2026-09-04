@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className={`min-h-screen flex items-center justify-center p-6 ${randomBackground}`}>
-      <div className="w-full max-w-6xl h-[80vh] rounded-3xl glass overflow-hidden flex flex-col">
+      <div className="w-full max-w-6xl h-[90vh] rounded-3xl glass overflow-hidden flex flex-col">
         <Navbar setActiveSection={setActiveSection} activeSection={activeSection} />
 
         <main className="p-8 overflow-y-auto flex-1">

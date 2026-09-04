@@ -29,7 +29,7 @@ const randomProfile = profilePics[Math.floor(Math.random() * profilePics.length)
 export const Hero = ({ setActiveSection }) => {
     return (
         // background
-        <section className="relative min-h-screen flex items-center overflow-hidden">
+        <section className="relative flex items-center overflow-hidden">
 
             {/* Floating dots */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -49,8 +49,8 @@ export const Hero = ({ setActiveSection }) => {
             </div>
 
             {/* content */}
-            <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="container mx-auto px-6 relative z-10">
+                <div className="grid lg:grid-cols-2 gap-8 items-center">
                     {/* left column */}
                     <div className="space-y-6">
                         <div className="animate-fade-in">
@@ -62,7 +62,7 @@ export const Hero = ({ setActiveSection }) => {
 
                         {/* headline */}
                         <div className="space-y-4">
-                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-code leading-tight animate-fade-in animation-delay-100">
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-code leading-tight animate-fade-in animation-delay-100">
                                 Kush <span className="text-primary glow-text">Suthar</span>
                             </h1>
                             <p className="text-lg text-muted-foreground max-w-lg font-clean animate-fade-in animation animation-delay-200">
@@ -88,7 +88,7 @@ export const Hero = ({ setActiveSection }) => {
                     </div>
 
                     {/* right column */}
-                    <div className="relative animate-fade-in animation-delay-300">
+                    <div className="relative animate-fade-in animation-delay-300 pt-10">
                         {/* profile pic */}
                         <div className="relative max-w-md mx-auto">
                             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse"/>
