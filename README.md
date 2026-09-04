@@ -8,15 +8,7 @@ The reason I chose to make a personal website for [Hack Club](https://horizons.h
 For context, I had very little experience in web dev, which was mainly done during my grade 10 CS course (mainly p5.js, and some basic HTML/CSS/JS). So, to understand and learn how these frameworks worked, I followed a tutorial. The particular tutorial I followed 
 was from [PedroTech](https://www.youtube.com/watch?v=cIYdiRDFWQw). 
 
-This tutorial was especially helpful because it taught me how a lot of websites are made and taught me skills that I could use for my other projects. One of the projects these skills were used in was our school's robotics club's website, 
-which had Design/Electrical/Software lessons that were created by the execs to be used as teaching material for everyone. 
-
-## Motivation
-
-Before this project, I had built several robotics and PCB hardware projects, but I didn't have a centralized place to showcase them. I wanted to build a portfolio for **Hack Club Horizons** to share my work with the community. 
-
-Coming into this, my web development background was limited to basic HTML/CSS/JS and p5.js from my 10th-grade CS class. To learn web dev frameworks, I followed a tutorial by [PedroTech](https://www.youtube.com/watch?v=cIYdiRDFWQw) 
-to grasp component structure, state management, and Tailwind styling. The skills I learned while building this site directly helped me contribute to my school robotics club's educational website!
+This tutorial was especially helpful because it taught me how a lot of websites are made and taught me skills that I could use for my other projects. One of the projects these skills were used in was our school's robotics club's website, which had design/electrical/software lessons that were created by the execs to be used as teaching material for everyone. 
 
 ## Screenshots
 
@@ -34,7 +26,7 @@ to grasp component structure, state management, and Tailwind styling. The skills
 
 ## How it works
 
-My website was initially made as a React single-page website, where you had to scroll down to each element. 
+My website was initially made as a React single-page website, where you had to scroll down to each element to view the different pages.
 
 Instead of this, I used React's `useState()` to give it a windowed layout where the navbar brought you to different pages. In `app.jsx`, I initialized the different sections using `activeSection`, kind of like the routes on a map.
 
@@ -50,13 +42,6 @@ Front end:
 - Vite
 - Tailwind CSS
 - Javascript
-
-Icons:
-- React Icons
-
-Tools: 
-- npm
-- git
 
 ## Deployment
 

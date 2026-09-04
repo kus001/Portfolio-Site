@@ -7,11 +7,7 @@ import { Projects } from "@/sections/Projects";
 import { Contact } from "@/sections/Contact";
 import { randomBackground } from "@/styles/backgrounds";
 
-
-// had to get help from AI, could not figure out how to change the website from just being a single page where you scroll down, to having the buttons in the navbar actually lead to different pages.
-
 function App() {
-
   const [activeSection, setActiveSection] = useState("home");
 
   const sections = {
@@ -23,35 +19,14 @@ function App() {
   };
 
   return (
-    <div className={`
-      min-h-screen
-      flex
-      items-center
-      justify-center
-      p-6
-      ${randomBackground}
-    `}>
+    <div className={`min-h-screen flex items-center justify-center p-6 ${randomBackground}`}>
+      <div className="w-full max-w-6xl h-[80vh] rounded-3xl glass overflow-hidden flex flex-col">
+        <Navbar setActiveSection={setActiveSection} activeSection={activeSection} />
 
-      <div className="
-        w-full
-        max-w-6xl
-        rounded-3xl
-        glass
-        overflow-hidden
-      ">
-
-        <Navbar setActiveSection={setActiveSection}/>
-
-        <main className="
-          p-8
-          transition-all
-          duration-500
-        ">
+        <main className="p-8 overflow-y-auto flex-1">
           {sections[activeSection]}
         </main>
-
       </div>
-
     </div>
   );
 }

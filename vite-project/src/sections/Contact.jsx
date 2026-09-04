@@ -91,14 +91,14 @@ export const Contact = () => {
             <div className="container mx-auto px-6 relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-4xl md:5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-                        Get in{" "}
+                        Connect with{" "}
                         <span className="font-serif italic font-normal text-white">
-                            touch
+                            me
                         </span>
                     </h2>
-                    <p className="text-muted-foreground animate-fade-in font-code animation-delay-200">
-                        Have a question, an opportunity, or just want to connect? Feel free to reach out.
-                    </p>
+                    {/* <p className="text-muted-foreground animate-fade-in font-code animation-delay-200">
+                        Feel free to reach out!
+                    </p> */}
                 </div>
 
                 <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto ">
