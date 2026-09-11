@@ -37,7 +37,6 @@ And lastly, all the styling is present in `index.css`.
 
 ## Tech Stack
 
-Front end:
 - React.js
 - Vite
 - Tailwind CSS
