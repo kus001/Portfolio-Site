@@ -72,18 +72,26 @@ export const Hero = ({ setActiveSection }) => {
 
                         {/* social links */}
                         <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
-                            <span className="text-sm text-muted-foreground font-medium tracking-wider font-clean">Find me: </span>
-                            {[
-                                {icon: FaGithub, label: "Github", onClick : () => window.open("https://github.com/kus001", "_blank")},
-                                // {icon: FaLinkedinIn, label: "Linkedin", onClick : () => window.open("", "_blank")}, 
-                                // logged out of Linkedin account, when logged back on, ADD BACK the link 
-                                {icon: FaInstagram, label: "Instagram", onClick : () => window.open("https://www.instagram.com/kus.sutharr", "_blank")},
-                                {icon: FaFileAlt, label: "Resume", onClick : () => window.open("/Resume - Kush Suthar.png", "_blank")}
-                            ].map((social, idx) => (
-                                <a key={idx} href={social.href} onClick={social.onClick} className="p-4 rounded-full glass hover:bg-primary/10 hover:bg-primary/20 transition-all duration-300">
-                                    {<social.icon className="w-4.5 h-4.5"/>}
-                                </a>
-                            ))}
+                          <span className="text-sm text-muted-foreground font-medium tracking-wider font-clean">
+                            Find me:
+                          </span>
+
+                          {[
+                            { icon: FaGithub, label: "Github", href: "https://github.com/kus001" },
+                            { icon: FaInstagram, label: "Instagram", href: "https://www.instagram.com/kus.sutharr" },
+                            { icon: FaFileAlt, label: "Resume", href: "/Resume - Kush Suthar.png" }
+                          ].map((social, idx) => (
+                            <a
+                              key={idx}
+                              href={social.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label={social.label}
+                              className="p-4 rounded-full glass hover:bg-primary/20 transition-all duration-300"
+                            >
+                              <social.icon className="w-4.5 h-4.5" />
+                            </a>
+                          ))}
                         </div>
                     </div>
 
