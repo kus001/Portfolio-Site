@@ -37,11 +37,16 @@ And lastly, all the styling is present in `index.css`.
 
 ## Tech Stack
 
-Front end:
 - React.js
 - Vite
 - Tailwind CSS
 - Javascript
+
+#### Other sources
+
+- Icons: [react-icons](https://react-icons.github.io/react-icons/search/#q=infinity)
+- Profile Picture: [Pixel Art Village](https://pixelartvillage.com/)
+- Contact-me form: [EmailJS](https://www.emailjs.com/)
 
 ## Deployment
 
