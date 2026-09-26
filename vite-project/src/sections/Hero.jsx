@@ -66,7 +66,7 @@ export const Hero = ({ setActiveSection }) => {
                                 Kush <span className="text-primary glow-text">Suthar</span>
                             </h1>
                             <p className="text-lg text-muted-foreground max-w-lg font-clean animate-fade-in animation animation-delay-200">
-                                Engineering things that make life a little more interesting.
+                                I like making cool things.
                             </p>
                         </div>
 
