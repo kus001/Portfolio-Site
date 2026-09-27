@@ -12,6 +12,7 @@ const projects = [
     description: "A mapping software made as a team for HackClub's ThirdSpace program.",
     tags: ["Python", "React", "Tailwind CSS", "Vite"],
     image: map_thirdspace,
+    imageFit: "object-contain",
     github: "https://github.com/kus001/map",
     progress: 7,
     status: "building",
