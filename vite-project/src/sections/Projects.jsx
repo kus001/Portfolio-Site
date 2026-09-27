@@ -4,13 +4,14 @@ import robotics_logo from "@/assets/wci_robotics.jpeg";
 import sample_code from "@/assets/sample-code.png";
 import esp32_car from "@/assets/esp32 car.png";
 import robotic_arm from "@/assets/robotic arm.jpg";
+import map_thirdspace from "@/assets/map-thirdspace-pic.png";
 
 const projects = [
     {
     title: "Map Router",
     description: "A mapping software made as a team for HackClub's ThirdSpace program.",
     tags: ["Python", "React", "Tailwind CSS", "Vite"],
-    image: robotics_logo,
+    image: map_thirdspace,
     github: "https://github.com/kus001/map",
     progress: 7,
     status: "building",
