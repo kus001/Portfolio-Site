@@ -6,6 +6,15 @@ import esp32_car from "@/assets/esp32 car.png";
 import robotic_arm from "@/assets/robotic arm.jpg";
 
 const projects = [
+    {
+    title: "Map Router",
+    description: "A mapping software made as a team for HackClub's ThirdSpace program.",
+    tags: ["Python", "React", "Tailwind CSS", "Vite"],
+    image: robotics_logo,
+    github: "https://github.com/kus001/map",
+    progress: 7,
+    status: "building",
+  },
   {
     title: "Lipo Battery Monitoring",
     description: "A custom, compact LiPo Battery monitoring PCB to help save our club's batteries from dying.",
@@ -18,7 +27,7 @@ const projects = [
   {
     title: "This Portfolio Website",
     description: "A website where I will show off my projects and let people know who I am.",
-    tags: ["React", "Tailwind CSS", "Vite", "UI/UX"],
+    tags: ["React", "Tailwind CSS", "Vite"],
     image: sample_code,
     github: "https://github.com/kus001/Portfolio-Site", 
     progress: 9,
