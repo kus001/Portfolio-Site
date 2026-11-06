@@ -13,7 +13,7 @@ const projects = [
     tags: ["Python", "React", "Tailwind CSS", "Vite"],
     image: map_thirdspace,
     github: "https://github.com/kus001/map",
-    progress: 9,
+    progress: 8,
     status: "building",
   },
   {
